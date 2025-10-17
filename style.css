@@ -1,0 +1,255 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    padding: 100px 50px;
+}
+
+.container {
+    width: 1300px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 52px;
+    padding-bottom: 30px;
+}
+
+.main-section {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mail-audio img,
+.femail-audio img {
+    width: 200px;
+}
+
+.audio-section {
+    display: flex;
+    width: 100%;
+}
+
+.femail-audio {
+    width: 50%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mail-audio {
+    width: 50%;
+    text-align: left;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.text-to-audio {
+    width: 700px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    padding: 20px;
+    resize: none;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.text-to-audio:focus,
+.text-to-audio:active {
+    outline: none;
+}
+
+.all-functionality {
+    margin-top: 100px;
+}
+
+.all-functionality button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid #cccccc00;
+    background-color: #DDDA58;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 200px;
+}
+
+.all-functionality button:hover {
+    background-color: #2C7E9B;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.all-functionality button:first-child {
+    margin-right: 20px;
+    color: #ffffff;
+    background-color: #2C7E9B;
+}
+
+.all-functionality button:first-child:hover {
+    background-color: #DDDA58;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.mail-audio-speaker {
+    width: 70px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-left: 40px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.mail-audio-speaker:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: #ffffff transparent transparent transparent;
+    left: -20px;
+    top: 18px;
+    rotate: 90deg;
+    z-index: 999;
+}
+
+.female-audio-speaker {
+    width: 70px;
+    height: 50px;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-right: 40px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.female-audio-speaker:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: #ffffff transparent transparent transparent;
+    right: -20px;
+    top: 18px;
+    rotate: 270deg;
+    z-index: 999;
+}
+
+.submit-btn {
+    margin-top: 30px;
+    background-color: red !important;
+    color: #ffffff !important;
+}
+
+div#wave {
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 3px;
+        background: #303131;
+        animation: wave 1.3s linear infinite;
+
+        &:nth-child(2) {
+            animation-delay: -1.1s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.9s;
+        }
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    60%,
+    100% {
+        transform: initial;
+    }
+
+    30% {
+        transform: translateY(-15px);
+    }
+}
+
+.mail-audio-speaker #wave {
+    margin-right: 12px !important;
+    width: fit-content;
+}
+
+.female-audio-speaker #wave2 {
+    margin-left: 18px !important;
+    width: fit-content;
+}
+
+div#wave2 {
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 3px;
+        background: #303131;
+        animation: wave 1.3s linear infinite;
+
+        &:nth-child(2) {
+            animation-delay: -1.1s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.9s;
+        }
+    }
+}
+
+@keyframes wave {
+
+    0%,
+    60%,
+    100% {
+        transform: initial;
+    }
+
+    30% {
+        transform: translateY(-15px);
+    }
+}

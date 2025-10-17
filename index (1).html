@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showButton2() {
+            document.getElementById("button2").style.display = "initial";
+            document.getElementById("button3").style.display = "initial";
+            // document.getElementById("button1").style.display = "none";
+        }
+
+        function showButton3() {
+            document.getElementById("wave").style.display = "block";
+            document.getElementById("wave2").style.display = "none";
+            const text = document.getElementById("textInput").value;
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'en-US'; // You can change the language here Male voice
+            speech.rate = 0.8;       // Speed (0.1 to 10)
+            speech.pitch = 1.1;      // Pitch (0 to 2)
+            window.speechSynthesis.speak(speech);
+        }
+
+        function showButton4() {
+            document.getElementById("wave2").style.display = "block";
+            document.getElementById("wave").style.display = "none";
+             const text = document.getElementById("textInput").value;
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'en-IN'; // You can change the language here Femail voice
+            speech.rate = 0.9;       // Speed (0.1 to 10)
+            speech.pitch = 0.5;      // Pitch (0 to 2)
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+
+    
+</head>
+
+<body>
+
+    <section class="main-section">
+        <h1>Text To Speech</h1>
+        <div class="container">
+            <div class="audio-section">
+                <div class="mail-audio">
+                    <img src="male-removebg-preview.png" alt="male voice charachter">
+                    <div class="mail-audio-speaker">
+                        <div id="wave" style="display:none;">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="femail-audio">
+                    <div class="female-audio-speaker">
+                        <div id="wave2" style="display:none;">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <img src="female-removebg-preview.png" alt="female voice charachter">
+                </div>
+            </div>
+            <div class="all-functionality">
+                <button id="button2" style="display:none;" onclick="showButton3()">Male</button>
+                <button id="button3" style="display:none;" onclick="showButton4()">Female</button><br>
+                <textarea class="text-to-audio" name="" id="textInput" placeholder="Write Here..."></textarea><br>
+                <button id="button1" onclick="showButton2()" class="submit-btn">Submit</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
